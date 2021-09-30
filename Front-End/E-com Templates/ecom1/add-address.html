@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+<script>!function(e){"undefined"==typeof module?this.charming=e:module.exports=e}(function(e,n){"use strict";n=n||{};var t=n.tagName||"span",o=null!=n.classPrefix?n.classPrefix:"char",r=1,a=function(e){for(var n=e.parentNode,a=e.nodeValue,c=a.length,l=-1;++l<c;){var d=document.createElement(t);o&&(d.className=o+r,r++),d.appendChild(document.createTextNode(a[l])),n.insertBefore(d,e)}n.removeChild(e)};return function c(e){for(var n=[].slice.call(e.childNodes),t=n.length,o=-1;++o<t;)c(n[o]);e.nodeType===Node.TEXT_NODE&&a(e)}(e),e});
+</script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Hello, world!</title>
+    <style>
+         #load{
+width: 100%;
+height: 100vh;
+background: #1b1d21 url("img/load-min.gif");
+background-repeat: no-repeat;
+z-index: 999999;
+background-size: cover;
+background-position: center;
+position: fixed;
+}
+
+    </style>
+  </head>
+  <body >
+
+<div id="load">
+
+</div>
+
+    <section class="navb" id="home">
+        <div class="logo">
+            <img src="img/login/food & beverage.svg" alt="">
+        </div>
+        <a href="/cart.html">
+          <div class="cart">
+            <span>0</span>
+            <img src="img/add-to-basket.svg" alt="" class="bucket">
+           
+          </div>
+        </a>
+        <div class="sidebar" id="bar">
+         
+            <img src="img/menu.png" alt="">
+        </div>
+        <nav id="navbox">
+            <div class="profile">
+                <img src="img/login/undraw_eating_together_tjhx.svg" alt="">
+                <h3>Eat Together</h3>
+            </div>
+            <div id="crossBox">
+                <img src="img/close.png" alt="" id="close">
+            </div>
+            <ul>
+                <li><a href="index.html" class="link"><i class="fa fa-home " aria-hidden="true"></i> Home</a></li>
+               
+               
+                <li><a href="account.html" class="link"><i class="fa fa-address-book-o" aria-hidden="true"></i>Account</a></li>
+                <li><a href="login.html" class="link"><i class="fa fa-user-o" aria-hidden="true"></i>Login</a></li>
+            </ul>
+        </nav>
+       
+    </section>
+
+    <main>
+        <section class="address">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-12 mx-auto mb-3 ">
+                        <div class="card p-5">
+                            <h2 class="text-center">Add New Address</h2>
+                            <br>
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label >Full Name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter name" required>
+                                  </div>
+                                <div class="form-group">
+                                  <label >Phone:</label>
+                                  <input type="tel" class="form-control" placeholder="Enter Phone" required>
+                                </div>
+                                <div class="form-group">
+                                  <label >Another Number:</label>
+                                  <input type="tel" class="form-control" placeholder="Enter another number" required >
+                                </div>
+                                <div class="form-group">
+                                    <label >Address:</label>
+                                    <textarea class="form-control" rows="3" placeholder="Enter full address" required ></textarea>
+                                  </div>
+                                <div class="form-group">
+                                    <label >City:</label>
+                                    <input type="text" class="form-control" placeholder="Enter City" required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label >State:</label>
+                                    <input type="text" class="form-control" placeholder="Enter state" required>
+                                  </div>
+                                  <div class="form-group">
+                                    <label >Pincode:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Pincode" required>
+                                  </div>
+                                  <br>
+                                <div class="text-center mb-5">
+                                    <input type="submit" class="btn btn-info pt-2 pb-2 pl-5 pr-5" name="address" value="Submit">
+                                </div>
+                              </form>
+                        </div>
+        
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Gallery</h2>
+                    <br>
+                    <div class="d-inline-block">
+                      
+                       <a href=""> <img src="img/eaters-collective-12eHC6FxPyg-unsplash.jpg" alt="" class="fot-img"></a>
+                        <a href=""><img src="img/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" alt="" class="fot-img"></a>
+                       
+                    </div>
+                    
+                    <div class="d-inline-block mt-2">
+                      
+                       <a href=""> <img src="img/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg" alt="" class="fot-img"></a>
+                      <a href="">  <img src="img/casey-lee-awj7sRviVXo-unsplash.jpg" alt="" class="fot-img"></a>
+                       
+                    </div>
+                    <div class="d-inline-block mt-2">
+                      
+                        <a href=""> <img src="img/pablo-merchan-montes-MXovqM130UI-unsplash.jpg" alt="" class="fot-img"></a>
+                       <a href="">  <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="fot-img"></a>
+                        
+                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Top Category</h2>
+                    <br>
+                    <div class="p-3 box-top">
+                        <ul>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Best Offers</h2>
+                    <br>
+                    <div class="p-3 box-top">
+                        <ul>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Contact Us</h2>
+                    <br>
+                    <strong class="text-white">Address:</strong>
+                    <br>
+                    <p class="text-white">Bay Square 1, Building 7, Office 401-23 Business Bay, Dubai, United Arab Emirates</p>
+                   <div class="box-top">
+                    <hr>
+                   </div>
+                    <strong class="text-white">Number:</strong>
+                    <br>
+                    <p class="text-white">+971 44 302 476</p>
+                    <div class="box-top">
+                        <hr>
+                       </div>
+                        <strong class="text-white">Email:</strong>
+                        <br>
+                        <p class="text-white">info@food.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- <script>
+      var load=document.getElementById('load');
+      function loadfunc(){
+        load.style.display="none";
+      }
+    </script> -->
+    <script>
+      $(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 5000;
+function hidePreloader() {
+var preloader = $('#load');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+    </script>
+
+
+
+    <script>
+        var close = document.getElementById("close");
+        var bar = document.getElementById("bar");
+        var navbox = document.getElementById("navbox");
+        var crossBox = document.getElementById("crossBox");
+
+        navbox.style.width = "0px";
+
+        bar.onclick = function () {
+            if (navbox.style.width === "0px") {
+                navbox.style.width = "250px";
+                crossBox.style.display = "block";
+
+            }
+
+        }
+        close.onclick = function () {
+            if (navbox.style.width === "250px") {
+                navbox.style.width = "0px";
+                crossBox.style.display = "none";
+            }
+
+        }
+
+
+
+    </script>
+   
+  </body>
+</html>

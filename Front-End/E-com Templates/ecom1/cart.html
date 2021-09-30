@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+<script>!function(e){"undefined"==typeof module?this.charming=e:module.exports=e}(function(e,n){"use strict";n=n||{};var t=n.tagName||"span",o=null!=n.classPrefix?n.classPrefix:"char",r=1,a=function(e){for(var n=e.parentNode,a=e.nodeValue,c=a.length,l=-1;++l<c;){var d=document.createElement(t);o&&(d.className=o+r,r++),d.appendChild(document.createTextNode(a[l])),n.insertBefore(d,e)}n.removeChild(e)};return function c(e){for(var n=[].slice.call(e.childNodes),t=n.length,o=-1;++o<t;)c(n[o]);e.nodeType===Node.TEXT_NODE&&a(e)}(e),e});
+</script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Hello, world!</title>
+    <style>
+         #load{
+width: 100%;
+height: 100vh;
+background: #1b1d21 url("img/load-min.gif");
+background-repeat: no-repeat;
+z-index: 999999;
+background-size: cover;
+background-position: center;
+position: fixed;
+}
+
+    </style>
+  </head>
+  <body >
+
+<div id="load">
+
+</div>
+
+    <section class="navb" id="home">
+        <div class="logo">
+            <img src="img/login/food & beverage.svg" alt="">
+        </div>
+        <a href="/cart.html">
+          <div class="cart">
+            <span>0</span>
+            <img src="img/add-to-basket.svg" alt="" class="bucket">
+           
+          </div>
+        </a>
+        <div class="sidebar" id="bar">
+         
+            <img src="img/menu.png" alt="">
+        </div>
+        <nav id="navbox">
+            <div class="profile">
+                <img src="img/login/undraw_eating_together_tjhx.svg" alt="">
+                <h3>Eat Together</h3>
+            </div>
+            <div id="crossBox">
+                <img src="img/close.png" alt="" id="close">
+            </div>
+            <ul>
+                <li><a href="index.html" class="link"><i class="fa fa-home " aria-hidden="true"></i> Home</a></li>
+               
+               
+                <li><a href="account.html" class="link"><i class="fa fa-address-book-o" aria-hidden="true"></i>Account</a></li>
+                <li><a href="login.html" class="link"><i class="fa fa-user-o" aria-hidden="true"></i>Login</a></li>
+            </ul>
+        </nav>
+       
+    </section>
+
+    <main>
+        <section class="cart-item">
+            <div class="container">
+                <br><br>
+                <h1>Check Your Cart Items</h1>
+                <br>
+                <div class="row">
+                   
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="card">
+                            <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="img-fluid">
+                            <div class="p-1">
+                                <p>Lorem, ipsum dolor.</p>
+
+                            </div>
+                            <div class="pri">
+                                <p>Price: ₹<span id="price1">150</span> x <span id="numqty1">1</span></p>
+                                <p>Total: <span id="total1">150</span></p>
+                            </div>
+                            <div class="ope">
+                                <div class=" d-flex ">
+                                    <button class="btn btn-info" onclick="dec('qty1','price1','numqty1','total1')"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                    <input type="text" readonly value="1" id="qty1" class="inp-box" size="1" style="width: 40px;padding-left: 10px;" >
+                                    <button class="btn btn-info" onclick="inc('qty1','price1','numqty1','total1')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+
+                                </div>
+                                <div class="remove">
+                                    <button class="btn btn-danger">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="card">
+                            <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="img-fluid">
+                            <div class="p-1">
+                                <p>Lorem, ipsum dolor.</p>
+
+                            </div>
+                            <div class="pri">
+                                <p>Price: ₹<span id="price2">150</span> x <span id="numqty2">1</span></p>
+                                <p>Total: <span id="total2">150</span></p>
+                            </div>
+                            <div class="ope">
+                                <div class=" d-flex ">
+                                    <button class="btn btn-info" onclick="dec('qty2','price2','numqty2','total2')"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                    <input type="text" readonly value="1" id="qty2" class="inp-box" size="1" style="width: 40px;padding-left: 10px;" >
+                                    <button class="btn btn-info" onclick="inc('qty2','price2','numqty2','total2')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+
+                                </div>
+                                <div class="remove">
+                                    <button class="btn btn-danger">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="card">
+                            <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="img-fluid">
+                            <div class="p-1">
+                                <p>Lorem, ipsum dolor.</p>
+
+                            </div>
+                            <div class="pri">
+                                <p>Price: ₹<span id="price3">150</span> x <span id="numqty3">1</span></p>
+                                <p>Total: <span id="total3">150</span></p>
+                            </div>
+                            <div class="ope">
+                                <div class=" d-flex ">
+                                    <button class="btn btn-info" onclick="dec('qty3','price3','numqty3','total3')"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                    <input type="text" readonly value="1" id="qty3" class="inp-box" size="1" style="width: 40px;padding-left: 10px;" >
+                                    <button class="btn btn-info" onclick="inc('qty3','price3','numqty3','total3')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+
+                                </div>
+                                <div class="remove">
+                                    <button class="btn btn-danger">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                        <div class="card">
+                            <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="img-fluid">
+                            <div class="p-1">
+                                <p>Lorem, ipsum dolor.</p>
+
+                            </div>
+                            <div class="pri">
+                                <p>Price: ₹<span id="price4">150</span> x <span id="numqty4">1</span></p>
+                                <p>Total: <span id="total4">150</span></p>
+                            </div>
+                            <div class="ope">
+                                <div class=" d-flex ">
+                                    <button class="btn btn-info" onclick="dec('qty4','price4','numqty4','total4')"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                    <input type="text" readonly value="1" id="qty4" class="inp-box" size="1" style="width: 40px;padding-left: 10px;" >
+                                    <button class="btn btn-info" onclick="inc('qty4','price4','numqty4','total4')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+
+                                </div>
+                                <div class="remove">
+                                    <button class="btn btn-danger">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+                <div class="row checkout">
+                    <div class="col-lg-6 col-md-4 col-12 mx-auto mb-3 vb">
+                        <h3> Give a Tip:</h3> 
+                        <p>Here will be Tip Coin , One Tip Coin = 20 inr</p>
+                        
+                        <div class="tip-box">
+                         <button class="btn btn-info" onclick="tipdec('tip1')"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                         <input type="text" readonly value="1" id="tip1" class="inp-box" size="1" style="width: 40px;padding-left: 10px;" >
+                         <button class="btn btn-info" onclick="tipinc('tip1')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        </div>
+                        <br>
+                        <h4>Sub Total : <span id="total-price">400</span>.00 </h4>
+                        <h4>Tax : <span id="tax-price">30</span>.00 </h4>
+                        <h4>Tip-Price : <span id="tipprice1">20</span>.00 </h4>
+                        <hr>
+                        <h3>Total Price : <span id="total-price">250</span>.00 </h3>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-8 col-12 mx-auto mb-3">
+                      <div class="card">
+                        <div class="text-right">
+                         <a href="add-address.html" class="btn btn-info">Add Address</a>
+              
+                        </div>
+                        <br>
+                        <form action="" method="post">
+                          <p>Check One Address Where You Want to Collect Your Order: </p>
+                          <br>
+                          <!-- <div class="form-group">
+                                  <label for="">Total Amount:</label>
+                                  <input type="text" class="form-control" placeholder="" name="amount" disabled value="125.00">
+                                </div> -->
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="optradio" required> Atanu Jana <br>
+                              ata@gmail.com <br> 7985263321 <br> 7589461235 <br> Bay Square 1, Building 7, Office 401-23 Business
+                              <br> kolkata <br> West Bengal <br> 700001
+              
+                            </label>
+                          </div>
+                          <br>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="optradio" required> Somu Jana <br>
+                              somu@gmail.com <br> 9784561230 <br> 9845600123 <br> Bhi Square 2, Building 7, Office 401-23 Business
+                              <br> Tamluk <br> West Bengal <br> 700002
+              
+                            </label>
+                          </div>
+              
+                          <div class="text-center">
+                            <input type="submit" class="btn btn-info" name="continue" value="Checkout">
+                          </div>
+                        </form>
+              
+                        <br>
+              
+              
+              
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Gallery</h2>
+                    <br>
+                    <div class="d-inline-block">
+                      
+                       <a href=""> <img src="img/eaters-collective-12eHC6FxPyg-unsplash.jpg" alt="" class="fot-img"></a>
+                        <a href=""><img src="img/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" alt="" class="fot-img"></a>
+                       
+                    </div>
+                    
+                    <div class="d-inline-block mt-2">
+                      
+                       <a href=""> <img src="img/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg" alt="" class="fot-img"></a>
+                      <a href="">  <img src="img/casey-lee-awj7sRviVXo-unsplash.jpg" alt="" class="fot-img"></a>
+                       
+                    </div>
+                    <div class="d-inline-block mt-2">
+                      
+                        <a href=""> <img src="img/pablo-merchan-montes-MXovqM130UI-unsplash.jpg" alt="" class="fot-img"></a>
+                       <a href="">  <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="fot-img"></a>
+                        
+                     </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Top Category</h2>
+                    <br>
+                    <div class="p-3 box-top">
+                        <ul>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Best Offers</h2>
+                    <br>
+                    <div class="p-3 box-top">
+                        <ul>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                            <hr>
+                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                    <h2 class="text-white">Contact Us</h2>
+                    <br>
+                    <strong class="text-white">Address:</strong>
+                    <br>
+                    <p class="text-white">Bay Square 1, Building 7, Office 401-23 Business Bay, Dubai, United Arab Emirates</p>
+                   <div class="box-top">
+                    <hr>
+                   </div>
+                    <strong class="text-white">Number:</strong>
+                    <br>
+                    <p class="text-white">+971 44 302 476</p>
+                    <div class="box-top">
+                        <hr>
+                       </div>
+                        <strong class="text-white">Email:</strong>
+                        <br>
+                        <p class="text-white">info@food.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    
+    <script>
+      $(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 5000;
+function hidePreloader() {
+var preloader = $('#load');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+    </script>
+
+
+
+    <script>
+        var close = document.getElementById("close");
+        var bar = document.getElementById("bar");
+        var navbox = document.getElementById("navbox");
+        var crossBox = document.getElementById("crossBox");
+
+        navbox.style.width = "0px";
+
+        bar.onclick = function () {
+            if (navbox.style.width === "0px") {
+                navbox.style.width = "250px";
+                crossBox.style.display = "block";
+
+            }
+
+        }
+        close.onclick = function () {
+            if (navbox.style.width === "250px") {
+                navbox.style.width = "0px";
+                crossBox.style.display = "none";
+            }
+
+        }
+
+function dec(val,price,numqty,tprice){
+    let iconv=document.getElementById(val);
+    let number=document.getElementById(numqty);
+    var oneprice=document.getElementById(price);
+     var totprice=document.getElementById(tprice);
+     console.log(iconv);
+    if(iconv.value<=1)
+    {
+        iconv.value=1;
+        alert("number never be less than 1");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)-1;
+
+
+         number.innerHTML=parseInt(iconv.value);
+        totprice.innerHTML=parseInt(oneprice.innerHTML)*parseInt(iconv.value);
+
+    }
+
+
+}
+function inc(val,price,numqty,tprice){
+     
+  let iconv=document.getElementById(val);
+  let number=document.getElementById(numqty);
+    var oneprice=document.getElementById(price);
+    var totprice=document.getElementById(tprice);
+    if(iconv.value>=5)
+    {
+        iconv.value=5;
+        alert("number never be greate than 5");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)+1;
+        number.innerHTML=parseInt(iconv.value);
+        totprice.innerHTML=parseInt(oneprice.innerHTML)*parseInt(iconv.value);
+    }
+
+}
+
+function tipdec(tip){
+    let iconv=document.getElementById(tip);
+    //  let tip=document.getElementById('tipprice1');
+    var valu=document.getElementById("tipprice1")
+    if(iconv.value<=1)
+    {
+        iconv.value=1;
+        alert("Tip-Coin Never Be 0");
+    }
+    else{
+
+        iconv.value=parseInt(iconv.value)-1;
+        valu.innerText= 20 * parseInt(iconv.value) 
+
+
+
+         
+    }
+
+}
+function tipinc(tip){
+    let iconv=document.getElementById(tip);
+    //  let tip=document.getElementById('tipprice1')
+    var valu=document.getElementById("tipprice1")
+
+        iconv.value=parseInt(iconv.value)+1;
+        //  tip.innerHTML=20*parseInt(iconv.value)
+        valu.innerText= 20 * parseInt(iconv.value) 
+
+        
+    
+
+}
+
+
+function subotal()
+{
+
+
+}
+
+// function tiptotal(){
+
+// }
+
+    </script>
+   
+  </body>
+</html>
