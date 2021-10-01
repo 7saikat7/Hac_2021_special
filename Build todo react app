@@ -106,6 +106,7 @@ return(
 		</Button>
 	</InputGroup.Append>
 	</InputGroup>
+/*done*/
 
 </Col>
 {/* map over and print items */} {this.state.list.map(item => {return(
