@@ -1,10 +1,12 @@
 const inputs = document.querySelectorAll(".input");
 
+/*add function*/
 
 function addcl(){
 	let parent = this.parentNode.parentNode;
 	parent.classList.add("focus");
 }
+/*cheeking*/
 
 function remcl(){
 	let parent = this.parentNode.parentNode;
@@ -13,7 +15,7 @@ function remcl(){
 	}
 }
 
-
+/*add*/
 inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
