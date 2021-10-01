@@ -18,3 +18,6 @@ This repo is dedicated to contributors  to contribute ipen source specially hact
 2. You can create issue and comment on them to get assigned 
 3. you can create branches if necessary
 4. you can reach out if you want to be a maintiner 
+
+
+make a image about the project and the service and also provide some more detail about the project
