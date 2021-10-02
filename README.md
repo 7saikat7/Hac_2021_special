@@ -1,5 +1,6 @@
 # Hac_2021_special
-This repo is dedicated to contributors  to contribute ipen source specially hactoberfeast 2021 .Let's start hacking 
+This repo is dedicated to contributors  to contribute open source specially hactoberfeast 2021 .
+Let's start hacking 
 
 
 #How to contribute :
@@ -8,7 +9,7 @@ This repo is dedicated to contributors  to contribute ipen source specially hact
 
 2.Create a new folder with appropriate name of what's indside ,e.g:"Shoppting Cart Template / To-do list app"
 
-3.Add a requirments[mandatory] and a Readme.md file with litle description 
+3.Add a requirments [`mandatory`] and a Readme.md file with litle description 
 
 4.Push code and let's hack!
 
@@ -16,5 +17,5 @@ This repo is dedicated to contributors  to contribute ipen source specially hact
 
 1. Reach out For help at 7saikat7@gmail.com  or @Saikat_Dev on telegram for faster response.
 2. You can create issue and comment on them to get assigned 
-3. you can create branches if necessary
-4. you can reach out if you want to be a maintiner 
+3. You can create branches if necessary
+4. You can reach out if you want to be a maintiner 
