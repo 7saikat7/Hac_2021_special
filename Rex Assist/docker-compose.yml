@@ -1,0 +1,11 @@
+version: '2'
+
+services: 
+    server:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: alphaZero-server
+        image: alphazero:1.0.1
+        ports: 
+            - "5000:5000"
