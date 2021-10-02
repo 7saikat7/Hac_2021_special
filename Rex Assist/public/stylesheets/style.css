@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  background-image: url("https://source.unsplash.com/E8Ufcyxz514/4096x3112");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.confirmed {
+  display: flex;
+  flex: 0 0 minmax(1em, auto);
+}
+
+.confirmed__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: 40em;
+  max-width: 40em;
+  color: white;
+}
+.code {
+  font-size: 1em;
+  overflow-x: scroll;
+  max-width: 50em;
+  color: yellow;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+p {
+  padding-bottom: 0.5em;
+  font-weight: 400;
+}
+
+a {
+  color: white;
+}
+
+img {
+  max-width: 38em;
+  padding-right: 2em;
+}
+.code {
+  font-size: 1em;
+  overflow-x: auto;
+  color: yellow;
+}
+
+@media screen and (max-width: 880px) {
+  .confirmed {
+    flex-direction: column;
+  }
+  .confirmed__text {
+    padding-left: 0;
+  }
+
+  h1 {
+    margin: auto 0.8em;
+  }
+
+  p {
+    max-width: 30em;
+    margin: auto 2em;
+  }
+  img {
+    width: 90%;
+    padding-right: 0;
+  }
+
+  button {
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .confirmed {
+    flex-direction: column;
+  }
+
+  .confirmed__text {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  p {
+    max-width: 25em;
+    margin: auto 2em;
+  }
+  img {
+    width: 90%;
+    padding-right: 0;
+  }
+
+  button {
+    margin: auto;
+  }
+}
