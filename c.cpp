@@ -1,13 +1,27 @@
-#include <iostream>
+/*
+    AUTHOR : SIDDHANT MANZE
+    DATE   : 28/08/2021
+*/
+#include<bits/stdc++.h>
+#define ll long long
 using namespace std;
 
-int main() {
-    cout<<"137=2(2(2)+2+2(0))+2(2+2(0))+2(0)\n";
-    cout<<"1315=2(2(2+2(0))+2)+2(2(2+2(0)))+2(2(2)+2(0))+2+2(0)\n";
-    cout<<"73=2(2(2)+2)+2(2+2(0))+2(0)\n";
-    cout<<"136=2(2(2)+2+2(0))+2(2+2(0))\n";
-    cout<<"255=2(2(2)+2+2(0))+2(2(2)+2)+2(2(2)+2(0))+2(2(2))+2(2+2(0))+2(2)+2+2(0)\n";
-    cout<<"1384=2(2(2+2(0))+2)+2(2(2+2(0)))+2(2(2)+2)+2(2(2)+2(0))+2(2+2(0))\n";
-    cout<<"16385=2(2(2+2(0))+2(2)+2)+2(0)\n";
-	return 0;
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    {
+        ll n,a,num=1;
+        cin>>n>>a;
+        for (num==1; num<350; num++)
+        {
+            if (num*num<=n && (num+1)*(num+1)>n)
+            {
+                break;
+            }
+        }
+        cout<<num*a<<endl;
+    }
+    return 0;
 }
