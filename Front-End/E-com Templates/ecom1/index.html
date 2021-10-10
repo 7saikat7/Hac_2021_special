@@ -1,346 +1,359 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
-<script>!function(e){"undefined"==typeof module?this.charming=e:module.exports=e}(function(e,n){"use strict";n=n||{};var t=n.tagName||"span",o=null!=n.classPrefix?n.classPrefix:"char",r=1,a=function(e){for(var n=e.parentNode,a=e.nodeValue,c=a.length,l=-1;++l<c;){var d=document.createElement(t);o&&(d.className=o+r,r++),d.appendChild(document.createTextNode(a[l])),n.insertBefore(d,e)}n.removeChild(e)};return function c(e){for(var n=[].slice.call(e.childNodes),t=n.length,o=-1;++o<t;)c(n[o]);e.nodeType===Node.TEXT_NODE&&a(e)}(e),e});
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+  <script>!function(e){"undefined"==typeof module?this.charming=e:module.exports=e}(function(e,n){"use strict";n=n||{};var t=n.tagName||"span",o=null!=n.classPrefix?n.classPrefix:"char",r=1,a=function(e){for(var n=e.parentNode,a=e.nodeValue,c=a.length,l=-1;++l<c;){var d=document.createElement(t);o&&(d.className=o+r,r++),d.appendChild(document.createTextNode(a[l])),n.insertBefore(d,e)}n.removeChild(e)};return function c(e){for(var n=[].slice.call(e.childNodes),t=n.length,o=-1;++o<t;)c(n[o]);e.nodeType===Node.TEXT_NODE&&a(e)}(e),e});
 </script>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
 
 <link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>Hello, world!</title>
-    <!--make an css file and js file for better algorithmic structure explanation-->
-    <style>
-         #load{
-width: 100%;
-height: 100vh;
-background: #1b1d21 url("img/load-min.gif");
-background-repeat: no-repeat;
-z-index: 999999;
-background-size: cover;
-background-position: center;
-position: fixed;
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="css/style.css">
+
+<title>Hello, world!</title>
+<!--make an css file and js file for better algorithmic structure explanation-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+  *{
+    font-family: Rakkas;
+  }
+
+ #load{
+  width: 100%;
+  height: 100vh;
+  background: #1b1d21 url("img/load-min.gif");
+  background-repeat: no-repeat;
+  z-index: 999999;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
 }
 .sale{
-width: 100%;
-min-height: 50vh;
-background:  url("img/sale.jpg");
-    background-position: center;
-    background-size:cover;
-    
+  width: 100%;
+  min-height: 50vh;
+  background:  url("img/sale.jpg");
+  background-position: center;
+  background-size:cover;
+
 }
 .navb {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3)), url("img/eaters-collective-12eHC6FxPyg-unsplash.jpg");
-    background-position: center;
-    background-size:cover;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3)), url("img/eaters-collective-12eHC6FxPyg-unsplash.jpg");
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
 
 }
-    </style>
-  </head>
-  <body >
+</style>
+</head>
+<body >
 
-<div id="load">
+  <div id="load">
 
-</div>
-    <!--section start-->
-    <section class="navb" id="home">
-        <div class="logo">
-            <img src="img/login/food & beverage.svg" alt="">
+  </div>
+  <!--section start-->
+  <section class="navb" id="home">
+    <div class="logo">
+      <img src="img/login/food & beverage.svg" alt="">
+    </div>
+    <a href="/cart.html">
+      <div class="cart">
+        <span>0</span>
+        <img src="img/add-to-basket.svg" alt="" class="bucket">
+
+      </div>
+    </a>
+    <div class="sidebar" id="bar">
+
+      <img src="img/menu.png" alt="">
+    </div>
+    <nav id="navbox">
+      <div class="profile">
+        <img src="img/login/undraw_eating_together_tjhx.svg" alt="">
+        <h3>Eat Together</h3>
+      </div>
+      <div id="crossBox">
+        <img src="img/close.png" alt="" id="close">
+      </div>
+      <ul>
+        <li><a href="index.html" class="link"><i class="fa fa-home " aria-hidden="true"></i> Home</a></li>
+
+
+        <li><a href="account.html" class="link"><i class="fa fa-address-book-o" aria-hidden="true"></i>Account</a></li>
+        <li><a href="login.html" class="link"><i class="fa fa-user-o" aria-hidden="true"></i>Login</a></li>
+      </ul>
+    </nav>
+    <div class="title">
+      <h1 class="Rakkas">Nearby Stores</h1>
+      <h5><span class="typing"></span> </h5>
+      <br>
+      <form action="nn.php">
+        <div class="input-group ">
+          <input type="text" class="form-control" placeholder="Find Restaurants, Hotel . . ." aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+           <input type="submit" value="Search" class="input-group-text btn">
+         </div>
+       </div>
+     </form>
+
+   </div>
+ </section>
+
+ <main>
+  <section class="hero">
+
+    <div class="swiper-container slideshow">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+          <div class="slide-image" style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(img/brooke-lark-HlNcigvUi4Q-unsplash.jpg)"></div>
+          <span class="slide-title"> <p></p></span>
+
         </div>
-        <a href="/cart.html">
-          <div class="cart">
-            <span>0</span>
-            <img src="img/add-to-basket.svg" alt="" class="bucket">
-           
+
+        <div class="swiper-slide slide">
+          <div class="slide-image" style="background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(img/jay-wennington-N_Y88TWmGwA-unsplash.jpg)"></div>
+          <span class="slide-title"> <p></p></span>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide-image" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(img/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg)"></div>
+          <span class="slide-title"> <p></p></span>
+        </div>
+        <div class="swiper-slide slide">
+          <div class="slide-image" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(img/lily-banse--YHSwy6uqvk-unsplash.jpg)"></div>
+          <span class="slide-title"> <p></p></span>
+        </div>
+
+
+
+      </div>
+
+      <div class="slideshow-pagination"></div>
+
+      <div class="slideshow-navigation">
+        <div class="slideshow-navigation-button prev"><span class="fa fa-chevron-left"></span></div>
+        <div class="slideshow-navigation-button next"><span class="fa fa-chevron-right"></span></div>
+      </div>
+
+    </div>
+
+  </section>
+  <section class="top-cat">
+
+    <div class="container">
+      <h2 class="title-text">Top Category</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 mb-3">
+         <a href="">
+          <div class="card p-3">
+            <img src="img/coffee.svg" alt="" class="top-img">
+            <br>
+            <h5 class="text-center">Coffee House</h5>
           </div>
         </a>
-        <div class="sidebar" id="bar">
-         
-            <img src="img/menu.png" alt="">
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 mb-3">
+        <a href=""> <div class="card p-3">
+          <img src="img/drink.png" alt="" class="top-img">
+          <br>
+          <h5 class="text-center">Restaurants</h5>
+        </div></a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 mb-3">
+       <a href="">
+        <div class="card p-3">
+          <img src="img/hamburger.png" alt="" class="top-img">
+          <br>
+          <h5 class="text-center">Gym Center</h5>
         </div>
-        <nav id="navbox">
-            <div class="profile">
-                <img src="img/login/undraw_eating_together_tjhx.svg" alt="">
-                <h3>Eat Together</h3>
-            </div>
-            <div id="crossBox">
-                <img src="img/close.png" alt="" id="close">
-            </div>
-            <ul>
-                <li><a href="index.html" class="link"><i class="fa fa-home " aria-hidden="true"></i> Home</a></li>
-               
-               
-                <li><a href="account.html" class="link"><i class="fa fa-address-book-o" aria-hidden="true"></i>Account</a></li>
-                <li><a href="login.html" class="link"><i class="fa fa-user-o" aria-hidden="true"></i>Login</a></li>
-            </ul>
-        </nav>
-        <div class="title">
-            <h1>Nearby Stores</h1>
-            <h5>Best Offers Around You ! </h5>
-            <br>
-          <form action="nn.php">
-            <div class="input-group ">
-                <input type="text" class="form-control" placeholder="Find Restaurants, Hotel . . ." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                 <input type="submit" value="Search" class="input-group-text btn">
-                </div>
-              </div>
-          </form>
-           
-        </div>
-    </section>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 mb-3">
+     <a href="">
+      <div class="card p-3">
+        <img src="img/pizza.png" alt="" class="top-img">
+        <br>
+        <h5 class="text-center">Medical Store</h5>
+      </div>
+    </a>
+  </div>
 
-    <main>
-        <section class="hero">
+</div>
 
-            <div class="swiper-container slideshow">
-          
-              <div class="swiper-wrapper">
-          
-                <div class="swiper-slide slide">
-                  <div class="slide-image" style="background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(img/brooke-lark-HlNcigvUi4Q-unsplash.jpg)"></div>
-                  <span class="slide-title"> <p></p></span>
-                 
-                </div>
-          
-                <div class="swiper-slide slide">
-                  <div class="slide-image" style="background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(img/jay-wennington-N_Y88TWmGwA-unsplash.jpg)"></div>
-                  <span class="slide-title"> <p></p></span>
-                </div>
-          
-                <div class="swiper-slide slide">
-                  <div class="slide-image" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(img/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg)"></div>
-                  <span class="slide-title"> <p></p></span>
-                </div>
-                <div class="swiper-slide slide">
-                    <div class="slide-image" style="background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(img/lily-banse--YHSwy6uqvk-unsplash.jpg)"></div>
-                    <span class="slide-title"> <p></p></span>
-                  </div>
-          
-               
-          
-              </div>
-          
-              <div class="slideshow-pagination"></div>
-          
-              <div class="slideshow-navigation">
-                <div class="slideshow-navigation-button prev"><span class="fa fa-chevron-left"></span></div>
-                <div class="slideshow-navigation-button next"><span class="fa fa-chevron-right"></span></div>
-              </div>
-          
+
+</div>
+</section>
+<section class="top-store">
+  <div class="container">
+    <h2 class="title-text">Top Store</h2>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3 ">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
             </div>
-          
-          </section>
-          <section class="top-cat">
-             
-            <div class="container">
-                <h2 class="title-text">Top Category</h2>
-                <br><br>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                   <a href="">
-                    <div class="card p-3">
-                        <img src="img/coffee.svg" alt="" class="top-img">
-                        <br>
-                         <h5 class="text-center">Coffee House</h5>
-                    </div>
-                   </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                  <a href=""> <div class="card p-3">
-                    <img src="img/drink.png" alt="" class="top-img">
-                    <br>
-                         <h5 class="text-center">Restaurants</h5>
-                </div></a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                 <a href="">
-                    <div class="card p-3">
-                        <img src="img/hamburger.png" alt="" class="top-img">
-                        <br>
-                         <h5 class="text-center">Gym Center</h5>
-                    </div>
-                 </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                   <a href="">
-                    <div class="card p-3">
-                        <img src="img/pizza.png" alt="" class="top-img">
-                        <br>
-                         <h5 class="text-center">Medical Store</h5>
-                    </div>
-                   </a>
-                </div>
-               
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
             </div>
-    
-    
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
             </div>
-        </section>
-        <section class="top-store">
-            <div class="container">
-                <h2 class="title-text">Top Store</h2>
-                <br><br>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-                        <div class="card">
-                            <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                           
-                              <div class="owl-carousel owl-theme">
-                                <div class="store-box">
-                                  <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                                 </div>
-                                 <div class="store-box">
-                                  <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                                 </div>
-                                 <div class="store-box">
-                                  <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                                 </div>
-                            </div>
-                            <div class="p-3">
-                                <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                                <br>
-                                <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-                      <div class="card">
-                          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                         
-                            <div class="owl-carousel owl-theme">
-                              <div class="store-box">
-                                <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                               </div>
-                               <div class="store-box">
-                                <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                               </div>
-                               <div class="store-box">
-                                <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                               </div>
-                          </div>
-                          <div class="p-3">
-                              <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                              <br>
-                              <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                              <br>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-                    <div class="card">
-                        <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                       
-                          <div class="owl-carousel owl-theme">
-                            <div class="store-box">
-                              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                             </div>
-                             <div class="store-box">
-                              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                             </div>
-                             <div class="store-box">
-                              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                             </div>
-                        </div>
-                        <div class="p-3">
-                            <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                            <br>
-                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-                  <div class="card">
-                      <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                     
-                        <div class="owl-carousel owl-theme">
-                          <div class="store-box">
-                            <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                           </div>
-                           <div class="store-box">
-                            <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                           </div>
-                           <div class="store-box">
-                            <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                           </div>
-                      </div>
-                      <div class="p-3">
-                          <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                          <br>
-                          <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                          <br>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-                <div class="card">
-                    <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                   
-                      <div class="owl-carousel owl-theme">
-                        <div class="store-box">
-                          <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                         </div>
-                         <div class="store-box">
-                          <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                         </div>
-                         <div class="store-box">
-                          <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                         </div>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                        <br>
-                        <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
-              <div class="card">
-                  <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
-                 
-                    <div class="owl-carousel owl-theme">
-                      <div class="store-box">
-                        <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
-                       </div>
-                       <div class="store-box">
-                        <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
-                       </div>
-                       <div class="store-box">
-                        <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
-                       </div>
-                  </div>
-                  <div class="p-3">
-                      <h3 class="text-info">Lorem, ipsum dolor.</h3>
-                      <br>
-                      <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                      <br>
-                  </div>
-              </div>
           </div>
-                    
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
+        <div class="card">
+          <!-- <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid"> -->
+
+          <div class="owl-carousel owl-theme">
+            <div class="store-box">
+              <img src="img/arthur-osipyan-haYXkh8bN38-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/vincent-wachowiak-mrWW8FfbyvM-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="store-box">
+              <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="text-info">Lorem, ipsum dolor.</h3>
+            <br>
+            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+            <br>
+          </div>
+        </div>
+      </div>
+
                     <!-- <div class="col-lg-4 col-md-6 col-12 mx-auto mb-3">
                         <div class="card">
                             <img src="img/clifford-5ZB0w0vSgPk-unsplash.jpg" alt="" class="img-fluid">
@@ -351,185 +364,185 @@ background:  url("img/sale.jpg");
                                 <br>
                             </div>
                         </div>
-                    </div> -->
-                </div>
-                <br><br>
-                <a href="" class="btn btn-outline-info">See More</a>
-            </div>
-        </section>
-        <section class="sale"></section>
-        <section class="best-offer">
-            <div class="container">
-                <h2 class="title-text">Best Offers</h2>
-                <br><br>
-                <div class="row">
-                   
-                    <div class="owl-carousel owl-theme">
-						
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-            
-           
-            
-           
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-              <div class="card">
-                <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
-                <div class="p-3 ">
-                  <h3>50%  Offer</h3>
-                  <del>100$</del>
-                  <p>50$</p>
-                  <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
-                 
-                </div>
-              </div>
-					
+                      </div> -->
+                    </div>
+                    <br><br>
+                    <a href="" class="btn btn-outline-info">See More</a>
+                  </div>
+                </section>
+                <section class="sale"></section>
+                <section class="best-offer">
+                  <div class="container">
+                    <h2 class="title-text">Best Offers</h2>
+                    <br><br>
+                    <div class="row">
 
-					</div>
-                </div>
-            </div>
+                      <div class="owl-carousel owl-theme">
 
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
-                    <h2 class="text-white">Gallery</h2>
-                    <br>
-                    <div class="d-inline-block">
-                      
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+
+
+
+
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="img/mana5280-aq7zgL_XZfA-unsplash.jpg" alt="" class="img-fluid">
+                          <div class="p-3 ">
+                            <h3>50%  Offer</h3>
+                            <del>100$</del>
+                            <p>50$</p>
+                            <a href="" class="btn btn-outline-info">Add To Cart <i class="fa fa-cart-plus pl-2"></i></a>
+
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+              </main>
+              <footer>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                      <h2 class="text-white">Gallery</h2>
+                      <br>
+                      <div class="d-inline-block">
+
                        <a href=""> <img src="img/eaters-collective-12eHC6FxPyg-unsplash.jpg" alt="" class="fot-img"></a>
-                        <a href=""><img src="img/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" alt="" class="fot-img"></a>
+                       <a href=""><img src="img/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" alt="" class="fot-img"></a>
                        
-                    </div>
-                    
-                    <div class="d-inline-block mt-2">
-                      
-                       <a href=""> <img src="img/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg" alt="" class="fot-img"></a>
-                      <a href="">  <img src="img/casey-lee-awj7sRviVXo-unsplash.jpg" alt="" class="fot-img"></a>
-                       
-                    </div>
-                    <div class="d-inline-block mt-2">
-                      
-                        <a href=""> <img src="img/pablo-merchan-montes-MXovqM130UI-unsplash.jpg" alt="" class="fot-img"></a>
-                       <a href="">  <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="fot-img"></a>
-                        
                      </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+
+                     <div class="d-inline-block mt-2">
+
+                       <a href=""> <img src="img/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg" alt="" class="fot-img"></a>
+                       <a href="">  <img src="img/casey-lee-awj7sRviVXo-unsplash.jpg" alt="" class="fot-img"></a>
+                       
+                     </div>
+                     <div class="d-inline-block mt-2">
+
+                      <a href=""> <img src="img/pablo-merchan-montes-MXovqM130UI-unsplash.jpg" alt="" class="fot-img"></a>
+                      <a href="">  <img src="img/alex-munsell-auIbTAcSH6E-unsplash.jpg" alt="" class="fot-img"></a>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
                     <h2 class="text-white">Top Category</h2>
                     <br>
                     <div class="p-3 box-top">
-                        <ul>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
-                            <hr>
-                        </ul>
+                      <ul>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                        <hr>
+                      </ul>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
                     <h2 class="text-white">Best Offers</h2>
                     <br>
                     <div class="p-3 box-top">
-                        <ul>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
-                            <hr>
-                            <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
-                            <hr>
-                        </ul>
+                      <ul>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Restaurants</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Hotels</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Fitness</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Medical</a></li>
+                        <hr>
+                        <li><a href=""><i class="fa fa-check-square-o pr-2" aria-hidden="true"></i>Shopping</a></li>
+                        <hr>
+                      </ul>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-12 mx-auto mb-3">
                     <h2 class="text-white">Contact Us</h2>
                     <br>
                     <strong class="text-white">Address:</strong>
                     <br>
                     <p class="text-white">Bay Square 1, Building 7, Office 401-23 Business Bay, Dubai, United Arab Emirates</p>
-                   <div class="box-top">
-                    <hr>
-                   </div>
+                    <div class="box-top">
+                      <hr>
+                    </div>
                     <strong class="text-white">Number:</strong>
                     <br>
                     <p class="text-white">+971 44 302 476</p>
                     <div class="box-top">
-                        <hr>
-                       </div>
-                        <strong class="text-white">Email:</strong>
-                        <br>
-                        <p class="text-white">info@food.com</p>
+                      <hr>
+                    </div>
+                    <strong class="text-white">Email:</strong>
+                    <br>
+                    <p class="text-white">info@food.com</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </footer>
-    
-  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+              </div>
+            </footer>
+
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <!-- <script>
       var load=document.getElementById('load');
@@ -537,17 +550,29 @@ background:  url("img/sale.jpg");
         load.style.display="none";
       }
     </script> -->
+
+    <script>
+      $(document).ready(function(){
+        var typed = new Typed(".typing", {
+          strings: ["Best Offers Around You !"],
+          typeSpeed: 120,
+          backSpeed: 70,
+          loop: true
+        });
+
+      });
+    </script>
     <script>
       $(document).ready(function() {
 //Preloader
-preloaderFadeOutTime = 5000;
+preloaderFadeOutTime = 2000;
 function hidePreloader() {
-var preloader = $('#load');
-preloader.fadeOut(preloaderFadeOutTime);
+  var preloader = $('#load');
+  preloader.fadeOut(preloaderFadeOutTime);
 }
 hidePreloader();
 });
-    </script>
+</script>
 
 
 <script>
@@ -555,91 +580,91 @@ hidePreloader();
 
 
 
-    $(document).ready(function () {
+  $(document).ready(function () {
     $(".best-offer .owl-carousel").owlCarousel({
 
-        loop: true,
-				nav: false,
-				dots: false,
-				autoplay: true,
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: true,
 
-				responsive: {
-					0: {
-						items: 2,
+      responsive: {
+       0: {
+        items: 2,
 
-					},
-					600: {
-						items: 3,
+      },
+      600: {
+        items: 3,
 
-					},
-					800: {
-						items: 4,
-					}
-
-
-				}
-
-});
-/*response*/
+      },
+      800: {
+        items: 4,
+      }
 
 
-$(".top-store .owl-carousel").owlCarousel({
+    }
 
-loop: true,
-nav: false,
-dots: true,
-autoplay: true,
-
-responsive: {
-  0: {
-    items: 1,
-
-  }
- 
+  });
+    /*response*/
 
 
-}
+    $(".top-store .owl-carousel").owlCarousel({
 
-});
+      loop: true,
+      nav: false,
+      dots: true,
+      autoplay: true,
+
+      responsive: {
+        0: {
+          items: 1,
+
+        }
 
 
-});
+
+      }
+
+    });
+
+
+  });
 </script>
 
-    <script>
-        var close = document.getElementById("close");
-        var bar = document.getElementById("bar");
-        var navbox = document.getElementById("navbox");
-        var crossBox = document.getElementById("crossBox");
+<script>
+  var close = document.getElementById("close");
+  var bar = document.getElementById("bar");
+  var navbox = document.getElementById("navbox");
+  var crossBox = document.getElementById("crossBox");
 
-        navbox.style.width = "0px";
+  navbox.style.width = "0px";
 
-        bar.onclick = function () {
-            if (navbox.style.width === "0px") {
-                navbox.style.width = "250px";
-                crossBox.style.display = "block";
+  bar.onclick = function () {
+    if (navbox.style.width === "0px") {
+      navbox.style.width = "250px";
+      crossBox.style.display = "block";
 
-            }
+    }
 
-        }
-        close.onclick = function () {
-            if (navbox.style.width === "250px") {
-                navbox.style.width = "0px";
-                crossBox.style.display = "none";
-            }
+  }
+  close.onclick = function () {
+    if (navbox.style.width === "250px") {
+      navbox.style.width = "0px";
+      crossBox.style.display = "none";
+    }
 
-        }
+  }
 
 
 
-    </script>
-    <script>
+</script>
+<script>
         // The Slideshow class.
-    class Slideshow {
-        constructor(el) {
-            
+        class Slideshow {
+          constructor(el) {
+
             this.DOM = {el: el};
-          
+
             this.config = {
               slideshow: {
                 delay: 3000,
@@ -651,12 +676,12 @@ responsive: {
             
             // Set the slideshow
             this.init();
-          
-        }
-        init() {
-          
-          var self = this;
-          
+
+          }
+          init() {
+
+            var self = this;
+
           // Charmed title
           this.DOM.slideTitle = this.DOM.el.querySelectorAll('.slide-title');
           this.DOM.slideTitle.forEach((slideTitle) => {
@@ -665,19 +690,19 @@ responsive: {
           
           // Set the slider
           this.slideshow = new Swiper (this.DOM.el, {
-              
-              loop: true,
-              autoplay: {
-                delay: this.config.slideshow.delay,
-                disableOnInteraction: false,
-              },
-              speed: 500,
-              preloadImages: true,
-              updateOnImagesReady: true,
-              
+
+            loop: true,
+            autoplay: {
+              delay: this.config.slideshow.delay,
+              disableOnInteraction: false,
+            },
+            speed: 500,
+            preloadImages: true,
+            updateOnImagesReady: true,
+
               // lazy: true,
               // preloadImages: false,
-    
+
               pagination: {
                 el: '.slideshow-pagination',
                 clickable: true,
@@ -686,64 +711,64 @@ responsive: {
                 clickableClass: 'slideshow-pagination-clickable',
                 modifierClass: 'slideshow-pagination-',
                 renderBullet: function (index, className) {
-                  
+
                   var slideIndex = index,
-                      number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
+                  number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
                   
                   var paginationItem = '<span class="slideshow-pagination-item">';
                   paginationItem += '<span class="pagination-number">' + number + '</span>';
                   paginationItem = (index <= 8) ? paginationItem + '<span class="pagination-separator"><span class="pagination-separator-loader"></span></span>' : paginationItem;
                   paginationItem += '</span>';
-                
+
                   return paginationItem;
                   
                 },
               },
-    
+
               // Navigation arrows
               navigation: {
                 nextEl: '.slideshow-navigation-button.next',
                 prevEl: '.slideshow-navigation-button.prev',
               },
-    
+
               // And if we need scrollbar
               scrollbar: {
                 el: '.swiper-scrollbar',
               },
-            
+
               on: {
                 init: function() {
                   self.animate('next');
                 },
               }
-            
+
             });
           
             // Init/Bind events.
             this.initEvents();
             
-        }
-        initEvents() {
-            
+          }
+          initEvents() {
+
             this.slideshow.on('paginationUpdate', (swiper, paginationEl) => this.animatePagination(swiper, paginationEl));
             //this.slideshow.on('paginationRender', (swiper, paginationEl) => this.animatePagination());
-    
+
             this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
             
             this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
-                
-        }
-        animate(direction = 'next') {
-          
+
+          }
+          animate(direction = 'next') {
+
             // Get the active slide
             this.DOM.activeSlide = this.DOM.el.querySelector('.swiper-slide-active'),
             this.DOM.activeSlideImg = this.DOM.activeSlide.querySelector('.slide-image'),
             this.DOM.activeSlideTitle = this.DOM.activeSlide.querySelector('.slide-title'),
             this.DOM.activeSlideTitleLetters = this.DOM.activeSlideTitle.querySelectorAll('span');
-          
+
             // Reverse if prev  
             this.DOM.activeSlideTitleLetters = direction === "next" ? this.DOM.activeSlideTitleLetters : [].slice.call(this.DOM.activeSlideTitleLetters).reverse();
-          
+
             // Get old slide
             this.DOM.oldSlide = direction === "next" ? this.DOM.el.querySelector('.swiper-slide-prev') : this.DOM.el.querySelector('.swiper-slide-next');
             if (this.DOM.oldSlide) {
@@ -760,30 +785,30 @@ responsive: {
                 });
               });
             }
-          
+
             // Animate title
             this.DOM.activeSlideTitleLetters.forEach((letter,pos) => {
-                        TweenMax.to(letter, .6, {
-                            ease: Back.easeOut,
-                            delay: pos*.05,
-                            startAt: {y: '50%', opacity: 0},
-                            y: '0%',
-                            opacity: 1
-                        });
-                    });
-          
+              TweenMax.to(letter, .6, {
+                ease: Back.easeOut,
+                delay: pos*.05,
+                startAt: {y: '50%', opacity: 0},
+                y: '0%',
+                opacity: 1
+              });
+            });
+
             // Animate background
             TweenMax.to(this.DOM.activeSlideImg, 1.5, {
-                ease: Expo.easeOut,
-                startAt: {x: direction === 'next' ? 200 : -200},
-                x: 0,
+              ease: Expo.easeOut,
+              startAt: {x: direction === 'next' ? 200 : -200},
+              x: 0,
             });
-          
+
             //this.animatePagination()
-        
-        }
-        animatePagination(swiper, paginationEl) {
-                
+
+          }
+          animatePagination(swiper, paginationEl) {
+
           // Animate pagination
           this.DOM.paginationItemsLoader = paginationEl.querySelectorAll('.pagination-separator-loader');
           this.DOM.activePaginationItem = paginationEl.querySelector('.slideshow-pagination-item.active');
@@ -793,19 +818,19 @@ responsive: {
           // console.log(swiper.activeIndex);
           
           // Reset and animate
-            TweenMax.set(this.DOM.paginationItemsLoader, {scaleX: 0});
-            TweenMax.to(this.DOM.activePaginationItemLoader, this.config.slideshow.pagination.duration, {
-              startAt: {scaleX: 0},
-              scaleX: 1,
-            });
+          TweenMax.set(this.DOM.paginationItemsLoader, {scaleX: 0});
+          TweenMax.to(this.DOM.activePaginationItemLoader, this.config.slideshow.pagination.duration, {
+            startAt: {scaleX: 0},
+            scaleX: 1,
+          });
           
           
         }
         
-    }
-    
-    const slideshow = new Slideshow(document.querySelector('.slideshow'));
-    
+      }
+
+      const slideshow = new Slideshow(document.querySelector('.slideshow'));
+
     </script>
   </body>
-</html>
+  </html>
