@@ -1,0 +1,30 @@
+<mat-grid-list [cols]="cols" rowHeight="1:1">
+  <mat-grid-tile class="heroText">
+    <div>
+      <div
+        [ngClass]="{
+          'mat-display-4 primary': isDesktop,
+          'mat-headline primary-mobile': isMobile
+        }"
+      >
+        For all your holiday needs
+      </div>
+      <p
+        [ngClass]="{
+          'mat-display-1 secondary': isDesktop,
+          'mat-subheading-2 secondary': isMobile
+        }"
+      >
+        What may be your reason to celebrate we have got you covered! Event
+        halls for all the purposes you can imagine are available over here.
+      </p>
+      <a mat-raised-button color="primary" type="button" routerLink="/booking">
+        Book Now
+        <mat-icon>arrow_right_alt</mat-icon>
+      </a>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <img [src]="imagePath" class="HeroImage" alt="Party House" />
+  </mat-grid-tile>
+</mat-grid-list>

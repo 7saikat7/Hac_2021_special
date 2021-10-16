@@ -1,0 +1,20 @@
+.BookingImage {
+  object-fit: contain;
+  height: 90%;
+}
+.card-content {
+  text-align: center;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.action-button {
+  display: flex;
+  justify-content: space-between;
+}
+.user-booking-action-button {
+  display: flex;
+  justify-content: center;
+}

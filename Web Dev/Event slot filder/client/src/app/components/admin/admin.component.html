@@ -1,0 +1,41 @@
+<mat-card class="admin-card">
+  <mat-card-header><div class="mat-title">Add event Hall</div></mat-card-header>
+  <form class="form-control admin-form" (ngSubmit)="onAddHall()">
+    <mat-form-field appearance="outline" class="form-group admin-formField">
+      <mat-label for="Name">Name</mat-label>
+      <input
+        matInput
+        id="Name"
+        type="text"
+        name="name"
+        required
+        [(ngModel)]="name"
+      />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline" class="form-group admin-formField">
+      <mat-label for="Place">Place</mat-label>
+      <input
+        matInput
+        id="Place"
+        type="text"
+        name="Place"
+        required
+        [(ngModel)]="place"
+      />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline" class="form-group admin-formField">
+      <mat-label for="Capacity">Capacity</mat-label>
+      <input
+        matInput
+        id="Capacity"
+        type="number"
+        name="Capacity"
+        [(ngModel)]="capacity"
+      />
+    </mat-form-field>
+    <pre></pre>
+    <button mat-raised-button color="primary" type="submit">Create</button>
+  </form>
+</mat-card>
