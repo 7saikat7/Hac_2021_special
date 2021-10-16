@@ -1,0 +1,79 @@
+<div class="container">
+  <mat-card
+    [ngClass]="{ card: isDesktop, 'card-mobile': isMobile }"
+    [class.mat-elevation-z6]="true"
+  >
+    <mat-grid-list [cols]="cols" rowHeight="1:1.1">
+      <mat-grid-tile>
+        <img
+          [src]="imagePath"
+          class="login-image"
+        />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+          <div
+            [ngClass]="{
+              'mat-headline headline': isDesktop,
+              'mat-headline headline-mobile': isMobile
+            }"
+          >
+            Login
+          </div>
+          <form
+            [ngClass]="{
+              'form-control login-form': isDesktop,
+              'form-control login-form-mobile': isMobile
+            }"
+            (ngSubmit)="onSubmit()"
+          >
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="Email">Email</mat-label>
+              <input
+                matInput
+                id="Email"
+                type="email"
+                name="email"
+                [(ngModel)]="email"
+              />
+            </mat-form-field>
+            <pre></pre>
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="Password">Password</mat-label>
+              <input
+                matInput
+                id="Password"
+                type="password"
+                name="password"
+                [(ngModel)]="pass"
+              />
+            </mat-form-field>
+
+            <button
+              mat-raised-button
+              color="primary"
+              [ngClass]="{
+                'submit-button': isDesktop,
+                'submit-button-mobile': isMobile
+              }"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+          <a routerLink="/signup">
+            <div [ngClass]="{ 'signup-link': isMobile }">
+              Donot have an account? Singup
+            </div></a
+          >
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+</div>
