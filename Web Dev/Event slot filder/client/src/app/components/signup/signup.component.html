@@ -1,0 +1,106 @@
+<div class="container">
+  <mat-card
+    [ngClass]="{ card: isDesktop, 'card-mobile': isMobile }"
+    [class.mat-elevation-z6]="true"
+  >
+    <mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
+      <mat-grid-tile>
+        <img [src]="imagePath" class="signup-image" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div>
+          <div
+            [ngClass]="{
+              'mat-headline headline': isDesktop,
+              'mat-headline headline-mobile': isMobile
+            }"
+          >
+            Signup
+          </div>
+          <form
+            [ngClass]="{
+              'form-control login-form': isDesktop,
+              'form-control login-form-mobile': isMobile
+            }"
+            (ngSubmit)="onSubmit()"
+          >
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="Email">Email</mat-label>
+              <input
+                matInput
+                id="Email"
+                type="email"
+                name="email"
+                [(ngModel)]="email"
+                required
+              />
+            </mat-form-field>
+            <pre></pre>
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="Name">Name</mat-label>
+              <input
+                matInput
+                id="Name"
+                type="text"
+                name="Name"
+                [(ngModel)]="name"
+              />
+            </mat-form-field>
+            <pre></pre>
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="Password">Password</mat-label>
+              <input
+                matInput
+                id="Password"
+                type="password"
+                name="password"
+                [(ngModel)]="password"
+                required
+              />
+            </mat-form-field>
+            <pre></pre>
+            <mat-form-field
+              appearance="outline"
+              class="form-group login-matField"
+            >
+              <mat-label for="VPassword">Verify Password</mat-label>
+              <input
+                matInput
+                id="VPassword"
+                type="password"
+                name="Vpassword"
+                [(ngModel)]="verifyPass"
+                required
+              />
+            </mat-form-field>
+            <button
+              mat-raised-button
+              color="primary"
+              [ngClass]="{
+                'submit-button': isDesktop,
+                'submit-button-mobile': isMobile
+              }"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+          <a routerLink="/login">
+            <div [ngClass]="{ 'signup-link': isMobile }">
+              Have an account? Login
+            </div></a
+          >
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+</div>

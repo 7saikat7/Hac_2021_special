@@ -1,0 +1,133 @@
+<mat-grid-list [cols]="cols" rowHeight="1:0.7">
+  <mat-grid-tile>
+    <div>
+      <mat-card [class.mat-elevation-z4]="true">
+        <mat-card-header>
+          <mat-card-title> Enter the date and time of Event </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+          <form class="form-control" (ngSubmit)="search_date()">
+            <mat-form-field class="example-form-field" appearance="fill">
+              <mat-label>Enter Date Range</mat-label>
+              <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                <input
+                  matStartDate
+                  placeholder="Start date"
+                  formControlName="start"
+                />
+                <input
+                  matEndDate
+                  placeholder="End date"
+                  formControlName="end"
+                />
+              </mat-date-range-input>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+              <mat-error
+                *ngIf="range.controls.start.hasError('matStartDateInvalid')"
+              >
+                Invalid start date
+              </mat-error>
+              <mat-error
+                *ngIf="range.controls.end.hasError('matEndDateInvalid')"
+              >
+                Invalid end date
+              </mat-error>
+            </mat-form-field>
+            <pre></pre>
+            <button mat-raised-button color="accent" type="submit">
+              <div class="result">Search <mat-icon>search</mat-icon></div>
+            </button>
+          </form>
+          <div class="mat-body">OR</div>
+          <button mat-raised-button color="primary" (click)="your_bookings()">
+            Your Bookings
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <img [src]="imagePath" alt="booking-image" class="BookingImage" />
+  </mat-grid-tile>
+</mat-grid-list>
+<div class="mat-headline result">
+  <div *ngIf="userSearch">Available Halls</div>
+  <div *ngIf="!userSearch">Your Bookings</div>
+  <mat-icon> list </mat-icon>
+</div>
+<!--User Search-->
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight" *ngIf="userSearch">
+  <mat-grid-tile *ngFor="let hall of Halls">
+    <mat-card [class.mat-elevation-z3]="true">
+      <mat-card-header>
+        <mat-card-title class="result">
+          <mat-icon color="warn"> store </mat-icon>
+          <div>Name of the Hall: {{ hall.Name }}</div>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <div class="mat-body result">
+            <mat-icon color="primary"> room </mat-icon>
+            <b>Address:</b> {{ hall.Place }}
+          </div>
+          <div class="mat-body result">
+            <mat-icon color="accent"> supervised_user_circle </mat-icon>
+            <b>Accomodation Capacity:</b> {{ hall.Capacity }}
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="action-button">
+        <button mat-raised-button color="primary" (click)="book(hall)">
+          Book
+        </button>
+        <button mat-stroked-button color="warn">
+          Get notified
+          <mat-icon color="warn">notifications_active</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- User Bookings-->
+<mat-grid-list cols="2" rowHeight="1:0.3" *ngIf="userBooking">
+  <mat-grid-tile *ngFor="let booking of Bookings">
+    <mat-card [class.mat-elevation-z3]="true">
+      <mat-card-header>
+        <mat-card-title class="result">
+          <mat-icon color="warn"> store </mat-icon>
+          <div>Name of the Hall: {{ booking.Name }}</div>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <div class="mat-body result">
+            <mat-icon color="primary"> room </mat-icon>
+            <b>Address:</b> {{ booking.Place }}
+          </div>
+          <div class="mat-body result">
+            <mat-icon color="accent"> supervised_user_circle </mat-icon>
+            <b>Accomodation Capacity:</b> {{ booking.Capacity }}
+          </div>
+          <div>
+            <b>Start Date:</b> {{ booking.start_date }} <br />
+            <b>End Date:</b>
+            {{ booking.end_date }}
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="user-booking-action-button">
+        <button mat-raised-button color="warn" (click)="delete_book(booking)">
+          <div class="result">
+            <mat-icon>delete</mat-icon>
+            Delete
+          </div>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
