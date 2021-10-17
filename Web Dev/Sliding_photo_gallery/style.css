@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color: #111;
+}
+body h2{
+    color: aqua;
+}
+.container{
+    position:relative;
+    width:800px;
+    height:500px;
+    background:#222;
+    border: 1px solid blue;
+}
+.container .clip{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+.container .clip.clip1{
+    background:url(img/img1.jpg);
+    background-size:cover;
+    clip-path: polygon(0 0, 50% 0, 0 100%, 0% 100%);
+}
+.container .clip.clip2{
+    background:url(img/img2.jpg);
+    background-size:cover;
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+}
+.container .clip.clip3{
+    background:url(img/img3.jpg);
+    background-size:cover;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+}
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.container .clip .content{
+    position:absolute;
+    bottom:-100%;
+    left:0;
+    width:70%;
+    padding:20px;
+    background:#fff;
+    transition:0.5s;
+    opacity:0;
+}
+.container .clip:hover .content{
+    bottom:0;
+    opacity:1;
+}
