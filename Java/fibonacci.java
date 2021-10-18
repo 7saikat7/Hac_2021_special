@@ -26,3 +26,7 @@ public class Main
         printFibonacci(n-2);
     }  
 }  
+
+make a solution for sorting algorithm
+/*
+*/
