@@ -29,3 +29,5 @@ int main()
     }
     return 0;
 }   
+
+make parbola and hyberpola function
