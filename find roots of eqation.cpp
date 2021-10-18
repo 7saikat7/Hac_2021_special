@@ -29,4 +29,9 @@ int main()
     }
     return 0;
 }   
+
+
+make parbola and hyberpola function
+
 Root are based some case studies please give it
+
